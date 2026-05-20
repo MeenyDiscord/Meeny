@@ -1,27 +1,27 @@
 [
-	{
-		"title": "Meeny Credits",
-		"color": 3098834,
-		"fields": [
-			{
-				"name": "Owner",
-				"value": "- [CrusherNotDrip](https://crushernotdrip.tilnotdrip.org/)"
-			},
-			{
-				"name": "Programmers",
-				"value": "- [CrusherNotDrip (Lead)](https://crushernotdrip.tilnotdrip.org/)\n- [TechnikTil](https://techniktil.tilnotdrip.org/)"
-		},
-			{
-				"name": "Profile Picture",
-				"value": "- [jori](https://x.com/fm_jori/) (Made the base pfp)\n- maham (Polished it a bit)"
-			},
-			{
-				"name": "Server Runner",
-				"value": "- [TechnikTil](https://techniktil.tilnotdrip.org/)"
-			}
-		],
-		"footer": {
-			"text": "Made with discord.js"
-		}
-	}
+  {
+    "title": "Meeny Credits",
+    "color": 3098834,
+    "fields": [
+      {
+        "name": "Owner",
+        "value": "- [CrusherNotDrip](https://crushernotdrip.tilnotdrip.org/)"
+      },
+      {
+        "name": "Programmers",
+        "value": "- [CrusherNotDrip (Lead)](https://crushernotdrip.tilnotdrip.org/)\n- [TechnikTil](https://techniktil.tilnotdrip.org/)"
+      },
+      {
+        "name": "Profile Picture",
+        "value": "- [jori](https://x.com/fm_jori/) (Made the base pfp)\n- maham (Polished it a bit)"
+      },
+      {
+        "name": "Server Runner",
+        "value": "- [TechnikTil](https://techniktil.tilnotdrip.org/)"
+      }
+    ],
+    "footer": {
+      "text": "Made with discord.js"
+    }
+  }
 ]

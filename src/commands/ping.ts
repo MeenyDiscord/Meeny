@@ -4,28 +4,28 @@ import { MeenyCommand, RegisterCommand } from "../backend/bot";
 @RegisterCommand
 export class PingCommand extends MeenyCommand
 {
-	constructor()
-	{
-		const command: SlashCommandBuilder = new SlashCommandBuilder();
-		command.setDescription("Replies with Pong!");
+  constructor()
+  {
+    const command: SlashCommandBuilder = new SlashCommandBuilder();
+    command.setDescription("Replies with Pong! Yes that's it.");
 
-		command.setIntegrationTypes([ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall]);
-		command.setContexts([
-			InteractionContextType.Guild,
-			InteractionContextType.BotDM,
-			InteractionContextType.PrivateChannel,
-		]);
+    command.setIntegrationTypes([ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall]);
+    command.setContexts([
+      InteractionContextType.Guild,
+      InteractionContextType.BotDM,
+      InteractionContextType.PrivateChannel,
+    ]);
 
-		super("ping", command);
-	}
+    super("ping", command);
+  }
 
-	override async execute(interaction_metadata: Interaction): Promise<void>
-	{
-		if (!interaction_metadata.isRepliable())
-		{
-			return;
-		}
+  override async execute(interaction_metadata: Interaction): Promise<void>
+  {
+    if (!interaction_metadata.isRepliable())
+    {
+      return;
+    }
 
-		await interaction_metadata.reply("Pong!");
-	}
+    await interaction_metadata.reply("Pong!");
+  }
 }

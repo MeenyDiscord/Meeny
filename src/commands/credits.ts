@@ -6,37 +6,37 @@ import { MeenyCommand, RegisterCommand } from "../backend/bot";
 @RegisterCommand
 export class CreditsCommand extends MeenyCommand
 {
-	creditsEmbed: any[];
+  creditsEmbed: any[];
 
-	constructor()
-	{
-		const command: SlashCommandBuilder = new SlashCommandBuilder();
-		command.setDescription("All of the people who worked/helped making this bot");
+  constructor()
+  {
+    const command: SlashCommandBuilder = new SlashCommandBuilder();
+    command.setDescription("Replies with all of the people who worked/helped making this bot.");
 
-		command.setIntegrationTypes([ApplicationIntegrationType.UserInstall]);
-		command.setContexts([InteractionContextType.BotDM]);
+    command.setIntegrationTypes([ApplicationIntegrationType.UserInstall]);
+    command.setContexts([InteractionContextType.BotDM]);
 
-		super("credits", command);
+    super("credits", command);
 
-		try
-		{
-			const data: string = fs.readFileSync("./assets/credits/embed.json", "utf8");
-			this.creditsEmbed = JSON.parse(`{"credits": ${data}}`).credits;
-		}
-		catch (e)
-		{
-			console.log(chalk.red(`Error reading credits embed: ${e}`));
-			throw e;
-		}
-	}
+    try
+    {
+      const data: string = fs.readFileSync("./assets/credits/embed.json", "utf8");
+      this.creditsEmbed = JSON.parse(`{"credits": ${data}}`).credits;
+    }
+    catch (e)
+    {
+      console.log(chalk.red(`Error reading credits embed: ${e}`));
+      throw e;
+    }
+  }
 
-	override async execute(interaction_metadata: Interaction): Promise<void>
-	{
-		if (!interaction_metadata.isChatInputCommand())
-		{
-			return;
-		}
+  override async execute(interaction_metadata: Interaction): Promise<void>
+  {
+    if (!interaction_metadata.isChatInputCommand())
+    {
+      return;
+    }
 
-		await interaction_metadata.reply({embeds: this.creditsEmbed});
-	}
+    await interaction_metadata.reply({embeds: this.creditsEmbed});
+  }
 }
